@@ -2,10 +2,10 @@
 
 **************
 
-Here's the working application : [theanam.github.io/manifestgen](theanam.github.io/manifestgen)
+Here's the working application : [theanam.github.io/manifestgen](http://theanam.github.io/manifestgen)
 
 
-Built on [AngularJS](angularjs.org) and [Twitter Bootstrap](getbootstrap.com)
+Built on [AngularJS](http://angularjs.org) and [Twitter Bootstrap](http://getbootstrap.com)
 
 
 Feel free to fork, modify and send pull requests
