@@ -26,9 +26,11 @@
     				<label for="launchpath">Launch Path (mostly unchanged)</label>
     				<input type="text" class="form-control" id="launchpath" placeholder="Launch path, mostly /index.html" ng-model="fxapp.appd.launchPath">
   					</div>
-  					<div class="icos">
-  						<h4>Icons, at leas a 128x128 icon is recommended</h4>
   					</div>
+  					</div>
+  					<div class="panel panel-primary">
+  						<div class="panel-heading">Icons, at leas a 128x128 icon is recommended</div>
+  					<div class="panel-body">
   					<input type="checkbox" ng-model="ico128">128x128 Icon <input type="checkbox" ng-model="ico60">60x60 Icon <input type="checkbox" ng-model="ico32">32x32 Icon <input type="checkbox" ng-model="ico90">90x90 Icon <input type="checkbox" ng-model="ico120">120x120 Icon <input type="checkbox" ng-model="ico256">236x256 Icon
   					<div class="form-group" ng-show="ico128">
     				<label for="128">Icon 128x128</label>
@@ -54,7 +56,11 @@
     				<label for="256">Icon 256x256</label>
     				<input type="text" class="form-control" placeholder="/images/256.png" ng-model="fxapp.appd.icons.256">
   					</div>
-  					<div class="form-group dvn">
+  					</div></div>
+  					<div class="panel panel-primary">
+  					<div class="panel-heading">Developer Details</div>
+  					<div class="panel-body">
+  					<div class="form-group">
     				<label for="Developer">Developer Name</label>
     				<input type="text" class="form-control" placeholder="Anam Ahmed" ng-model="fxapp.appd.developer">
   					</div>
@@ -62,14 +68,16 @@
     				<label for="Developer Url">Developer URL</label>
     				<input type="text" class="form-control" placeholder="http://anam.co" ng-model="fxapp.appd.developerUrl">
   					</div>
+  					</div></div>
   					<div class="form-group">
     				<label for="Default Locale">Default Locale</label>
     				<input type="text" class="form-control" placeholder="en" ng-model="fxapp.appd.defaultLocale">
   					</div>
-				</div>
+
+				
 			</div>
 		</div>
-	</div>
+	
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
