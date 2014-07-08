@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="moz">
+<head>
+	<meta charset="utf-8">
+	<title>Manifest Generator for firefox OS Apps</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container" ng-controller="AppController as fxapp">
+<div class="row rfirst"></div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">App main details</div>
+				<div class="panel-body">
+					<div class="form-group">
+    				<label for="appname">App Name</label>
+    				<input type="text" class="form-control" id="appname" placeholder="My Awesome App" ng-model="fxapp.appd.appname">
+  					</div>
+  					<div class="form-group">
+    				<label for="appdescription">App Description</label>
+    				<textarea  class="form-control" id="appdesc" placeholder="My App Details" ng-model="fxapp.appd.appDescription"></textarea>
+  					</div>
+  					<div class="form-group">
+    				<label for="launchpath">Launch Path (mostly unchanged)</label>
+    				<input type="text" class="form-control" id="launchpath" placeholder="Launch path, mostly /index.html" ng-model="fxapp.appd.launchPath">
+  					</div>
+  					<div class="icos">
+  						<h4>Icons, at leas a 128x128 icon is recommended</h4>
+  					</div>
+  					<input type="checkbox" ng-model="ico128">128x128 Icon <input type="checkbox" ng-model="ico60">60x60 Icon <input type="checkbox" ng-model="ico32">32x32 Icon <input type="checkbox" ng-model="ico90">90x90 Icon <input type="checkbox" ng-model="ico120">120x120 Icon <input type="checkbox" ng-model="ico256">236x256 Icon
+  					<div class="form-group" ng-show="ico128">
+    				<label for="128">Icon 128x128</label>
+    				<input type="text" class="form-control" placeholder="/images/128.png" ng-model="fxapp.appd.icons.128">
+  					</div>
+  					<div class="form-group" ng-show="ico60">
+    				<label for="60">Icon 60x60</label>
+    				<input type="text" class="form-control" placeholder="/images/60.png" ng-model="fxapp.appd.icons.60">
+  					</div>
+  					<div class="form-group" ng-show="ico32">
+    				<label for="32">Icon 32x32</label>
+    				<input type="text" class="form-control" placeholder="/images/32.png" ng-model="fxapp.appd.icons.32">
+  					</div>
+  					<div class="form-group" ng-show="ico90">
+    				<label for="90">Icon 90x90</label>
+    				<input type="text" class="form-control" placeholder="/images/90.png" ng-model="fxapp.appd.icons.90">
+  					</div>
+  					<div class="form-group" ng-show="ico120">
+    				<label for="120">Icon 120x120</label>
+    				<input type="text" class="form-control" placeholder="/images/120.png" ng-model="fxapp.appd.icons.120">
+  					</div>
+  					<div class="form-group" ng-show="ico256">
+    				<label for="256">Icon 256x256</label>
+    				<input type="text" class="form-control" placeholder="/images/256.png" ng-model="fxapp.appd.icons.256">
+  					</div>
+  					<div class="form-group dvn">
+    				<label for="Developer">Developer Name</label>
+    				<input type="text" class="form-control" placeholder="Anam Ahmed" ng-model="fxapp.appd.developer">
+  					</div>
+  					<div class="form-group">
+    				<label for="Developer Url">Developer URL</label>
+    				<input type="text" class="form-control" placeholder="http://anam.co" ng-model="fxapp.appd.developerUrl">
+  					</div>
+  					<div class="form-group">
+    				<label for="Default Locale">Default Locale</label>
+    				<input type="text" class="form-control" placeholder="en" ng-model="fxapp.appd.defaultLocale">
+  					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Your Manifest file</div>
+				<div class="panel-body">
+					{<br>
+ 					"name": "{{fxapp.appd.appname}}",<br>
+  					"description": "{{fxapp.appd.appDescription}}",<br>
+ 					"launch_path": "{{fxapp.appd.launchPath}}",<br>
+  					"icons": {{fxapp.appd.icons | json}},<br>
+  					"developer": {<br>
+    				"name": "{{fxapp.appd.developer}}",<br>
+    				"url": "{{fxapp.appd.developerUrl}}"<br>
+  					},<br>
+  					"default_locale": "{{fxapp.appd.defaultLocale}}"<br>
+					}
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

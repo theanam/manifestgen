@@ -1,0 +1,17 @@
+{
+  "name": "Firefox OS App Manifest Generator",
+  "version": "0.0.1",
+  "authors": [
+    "Anam Ahmed <anam.ahmed.a@gmail.com>"
+  ],
+  "description": "Manifet generator for open web apps",
+  "main": "index.html",
+  "keywords": [
+    "firefox",
+    "os",
+    "app",
+    "manifest"
+  ],
+  "license": "MPL",
+  "homepage": "http://theanam.github.io/manifestgen"
+}
