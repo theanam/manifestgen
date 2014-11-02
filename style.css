@@ -7,3 +7,8 @@ height:50px;
 .icos{
 	margin-top:30px;
 }
+/*ln edit*/
+.ln-icon-checkbox-wrap label {
+	font-size: 13px;
+	font-weight: normal;
+}
