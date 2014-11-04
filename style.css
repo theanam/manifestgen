@@ -1,9 +1,27 @@
-.rfirst{
-height:50px;
+body {
+	background-color: #F1F1F1
+}
+.rfirst{	
+	height:50px;
+}
+.rfirst h1 {
+	font-weight: bold;
+	margin: 25px 0;
 }
 .dvn{
 	margin-top:20px;
 }
 .icos{
 	margin-top:30px;
+}
+/*ln edit*/
+.ln-icon-checkbox-wrap label {
+	font-size: 13px;
+	font-weight: normal;
+}
+.panel {
+	box-shadow: 1px 1px 2px 0px #aaa;
+}
+.panel-heading a {
+	cursor: pointer;
 }
