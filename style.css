@@ -24,4 +24,5 @@ body {
 }
 .panel-heading a {
 	cursor: pointer;
+	display: block;
 }
