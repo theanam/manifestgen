@@ -21,7 +21,7 @@
         <!-- start: app main details -->
         <accordion-group is-open="status.AppMain" class="panel-primary">
           <accordion-heading>
-            App main details 
+            App main details
             <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.AppMain, 'glyphicon-chevron-right': !status.AppMain}"></i>
           </accordion-heading>
           <div class="form-group">
@@ -37,27 +37,28 @@
             <input type="text" class="form-control" id="launchpath" placeholder="Launch path, mostly /index.html" ng-model="fxapp.appd.launchPath">
           </div>
         </accordion-group><!-- end: app main details -->
-        
+
         <!-- start: icons -->
         <accordion-group is-open="status.AppIcon" class="panel-primary">
           <accordion-heading>
-            Icons, at least a 128x128 icon is recommended 
+            Icons, at least a 128x128 icon is required and a 512x512 icon is recommended
             <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.AppIcon, 'glyphicon-chevron-right': !status.AppIcon}"></i>
           </accordion-heading>
           <div class="ln-icon-checkbox-wrap">
-            <label><input type="checkbox" ng-model="ico128" ng-change="change('128')">128x128 Icon</label> 
-            <label><input type="checkbox" ng-model="ico60" ng-change="change('60')">60x60 Icon</label> 
-            <label><input type="checkbox" ng-model="ico32" ng-change="change('32')">32x32 Icon</label> 
-            <label><input type="checkbox" ng-model="ico90" ng-change="change('90')">90x90 Icon</label> 
-            <label><input type="checkbox" ng-model="ico120" ng-change="change('120')">120x120 Icon</label> 
-            <label><input type="checkbox" ng-model="ico256" ng-change="change('256')">236x256 Icon</label>            
+            <label><input type="checkbox" ng-model="ico128" ng-change="change('128')">128x128 Icon</label>
+            <label><input type="checkbox" ng-model="ico60" ng-change="change('60')">60x60 Icon</label>
+            <label><input type="checkbox" ng-model="ico32" ng-change="change('32')">32x32 Icon</label>
+            <label><input type="checkbox" ng-model="ico90" ng-change="change('90')">90x90 Icon</label>
+            <label><input type="checkbox" ng-model="ico120" ng-change="change('120')">120x120 Icon</label>
+            <label><input type="checkbox" ng-model="ico256" ng-change="change('256')">256x256 Icon</label>
+            <label><input type="checkbox" ng-model="ico512" ng-change="change('512')">512x512 Icon</label>
           </div><!-- end: icon checkbox wrap -->
           <div class="ln-icon-path-wrap">
             <div class="form-group" ng-show="ico128">
               <label for="128">Icon 128x128</label>
               <input type="text" class="form-control" placeholder="/images/128.png" ng-model="fxapp.appd.icons.128">
             </div>
-            
+
             <div class="form-group" ng-show="ico60">
               <label for="60">Icon 60x60</label>
               <input type="text" class="form-control" placeholder="/images/60.png" ng-model="fxapp.appd.icons.60">
@@ -82,9 +83,14 @@
               <label for="256">Icon 256x256</label>
               <input type="text" class="form-control" placeholder="/images/256.png" ng-model="fxapp.appd.icons.256">
             </div>
+
+            <div class="form-group" ng-show="ico512">
+              <label for="512">Icon 512x512</label>
+              <input type="text" class="form-control" placeholder="/images/512.png" ng-model="fxapp.appd.icons.512">
+            </div>
           </div><!-- end: icon path wrap -->
         </accordion-group><!-- end: icons -->
-        
+
         <!-- start: developer details -->
         <accordion-group is-open="status.AppDeveloper" class="panel-primary">
           <accordion-heading>
@@ -101,7 +107,7 @@
           </div>
         </accordion-group><!-- end: developer details -->
 
-        
+
         <accordion-group is-open="status.AppLocale" class="panel-primary">
           <accordion-heading>
             Default Locale
@@ -131,7 +137,7 @@
     "default_locale": "{{fxapp.appd.defaultLocale}}"
 }          </pre>
         <button class="btn btn-primary" ng-click="downloadManifest()" download="manifest.webapp"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download</button>
-        </div>  
+        </div>
       </div><!-- end: your manifest file -->
     </div><!-- end: col 6 -->
 	</div><!-- end: row -->
